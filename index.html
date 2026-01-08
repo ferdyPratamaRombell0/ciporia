@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Dashboard Dagang Chiporia</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Custom scrollbar for horizontal tables if needed */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-[#111318] dark:text-white min-h-screen pb-12">
+    <!-- Header Section -->
+    <div
+        class="sticky top-0 z-50 bg-white/90 dark:bg-[#111318]/90 backdrop-blur-md border-b border-[#dbdfe6] dark:border-gray-800 px-4 py-3 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+            <div class="bg-primary/10 text-primary p-2 rounded-lg flex items-center justify-center">
+                <span class="material-symbols-outlined">dashboard</span>
+            </div>
+            <h1 class="text-lg font-bold leading-tight tracking-tight">Dagang Chiporia</h1>
+        </div>
+        <div class="flex items-center">
+            <!-- Profile or Settings Icon placeholder -->
+            <div class="size-8 rounded-full bg-gray-200 dark:bg-gray-700 overflow-hidden"
+                data-alt="User profile avatar placeholder">
+                <img alt="Profile" class="h-full w-full object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2y9XTaBu-nslWATZJdJD5_Ib17bF4n6j7cEScOw23TSCSv3mZcYotmLOgTmwdonk41WZGnZeVYdSijnohoSTCNIBkTsXpQyCxPkUdEcM-gTi0-dj9OQ_QgVa1-Sc9Dz7uNp2AcVb0lmBrWB3s9hTK8ZlIXzhgJTK8CEtM_PEp5LNsgqinQDvrXwPT3osKtDPnsG92QpJ0jnG5DafSYPXlzGq6r9KM3LSSGBB-VxOf8JW5SmA15kOBs_hZoOH1Tw1Oxp9i1hA9Y1wn" />
+            </div>
+        </div>
+    </div>
+    <!-- Title & Date -->
+    <div class="px-4 pt-6 pb-2">
+        <h2 class="text-2xl font-bold text-[#111318] dark:text-white leading-tight">Dashboard Keuangan</h2>
+        <p class="text-[#616f89] dark:text-gray-400 text-sm font-medium mt-1 flex items-center gap-1">
+            <span class="material-symbols-outlined text-sm">calendar_month</span>
+            Laporan Desember 2025
+        </p>
+    </div>
+    <!-- Stats Grid -->
+    <div class="grid grid-cols-2 gap-3 p-4">
+        <!-- Saldo Awal -->
+        <div
+            class="flex flex-col gap-2 rounded-xl p-4 bg-white dark:bg-[#1a202c] shadow-sm border border-gray-100 dark:border-gray-800">
+            <div class="flex items-center gap-2">
+                <span
+                    class="material-symbols-outlined text-blue-500 text-[20px] bg-blue-50 dark:bg-blue-900/30 p-1 rounded-md">account_balance_wallet</span>
+                <p class="text-gray-500 dark:text-gray-400 text-xs font-semibold uppercase tracking-wider">Saldo Awal
+                </p>
+            </div>
+            <p class="text-[#111318] dark:text-white tracking-tight text-xl font-bold">Rp196.000</p>
+            <p class="text-gray-400 text-xs">Per tanggal 28</p>
+        </div>
+        <!-- Saldo Saat Ini -->
+        <div
+            class="flex flex-col gap-2 rounded-xl p-4 bg-primary text-white shadow-md shadow-blue-200 dark:shadow-none">
+            <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-white text-[20px] bg-white/20 p-1 rounded-md">savings</span>
+                <p class="text-blue-100 text-xs font-semibold uppercase tracking-wider">Saldo Saat Ini</p>
+            </div>
+            <p class="tracking-tight text-xl font-bold">Rp69.000</p>
+            <p class="text-blue-100 text-xs">+35% vs Target</p>
+        </div>
+        <!-- Pengeluaran -->
+        <div
+            class="flex flex-col gap-2 rounded-xl p-4 bg-white dark:bg-[#1a202c] shadow-sm border border-gray-100 dark:border-gray-800">
+            <div class="flex items-center gap-2">
+                <span
+                    class="material-symbols-outlined text-red-500 text-[20px] bg-red-50 dark:bg-red-900/30 p-1 rounded-md">trending_down</span>
+                <p class="text-gray-500 dark:text-gray-400 text-xs font-semibold uppercase tracking-wider">Pengeluaran
+                </p>
+            </div>
+            <p class="text-red-600 dark:text-red-400 tracking-tight text-xl font-bold">Rp167.200</p>
+            <p class="text-gray-400 text-xs">Total bulan ini</p>
+        </div>
+        <!-- Pemasukan -->
+        <div
+            class="flex flex-col gap-2 rounded-xl p-4 bg-white dark:bg-[#1a202c] shadow-sm border border-gray-100 dark:border-gray-800">
+            <div class="flex items-center gap-2">
+                <span
+                    class="material-symbols-outlined text-green-500 text-[20px] bg-green-50 dark:bg-green-900/30 p-1 rounded-md">trending_up</span>
+                <p class="text-gray-500 dark:text-gray-400 text-xs font-semibold uppercase tracking-wider">Pemasukan</p>
+            </div>
+            <p class="text-green-600 dark:text-green-400 tracking-tight text-xl font-bold">Rp50.000</p>
+            <p class="text-gray-400 text-xs">Total bulan ini</p>
+        </div>
+    </div>
+    <!-- Charts Visualization (CSS Based) -->
+    <div class="px-4 pb-6">
+        <div class="bg-white dark:bg-[#1a202c] rounded-xl p-5 shadow-sm border border-gray-100 dark:border-gray-800">
+            <h3 class="text-base font-bold mb-4 flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary">bar_chart</span>
+                Analisis Keuangan
+            </h3>
+            <!-- Comparison Bar Chart -->
+            <div class="mb-6">
+                <p class="text-xs font-medium text-gray-500 mb-2">Pemasukan vs Pengeluaran</p>
+                <div class="flex flex-col gap-3">
+                    <!-- Income Bar -->
+                    <div class="w-full">
+                        <div class="flex justify-between text-xs mb-1">
+                            <span class="font-medium text-gray-600 dark:text-gray-300">Pemasukan</span>
+                            <span class="font-bold text-green-600">Rp50.000</span>
+                        </div>
+                        <div class="h-3 w-full bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
+                            <!-- Width approx 50/217 = ~23% of max visual scale -->
+                            <div class="h-full bg-green-500 rounded-full" style="width: 30%"></div>
+                        </div>
+                    </div>
+                    <!-- Expense Bar -->
+                    <div class="w-full">
+                        <div class="flex justify-between text-xs mb-1">
+                            <span class="font-medium text-gray-600 dark:text-gray-300">Pengeluaran</span>
+                            <span class="font-bold text-red-600">Rp167.200</span>
+                        </div>
+                        <div class="h-3 w-full bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
+                            <div class="h-full bg-red-500 rounded-full" style="width: 100%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Simplified Trend Line (Visual representation) -->
+            <div>
+                <p class="text-xs font-medium text-gray-500 mb-2">Tren Perubahan Saldo</p>
+                <div
+                    class="relative h-24 w-full bg-blue-50/50 dark:bg-blue-900/10 rounded-lg border border-blue-100 dark:border-blue-800 p-2 flex items-end justify-between px-4">
+                    <!-- Fake chart bars for visual -->
+                    <div class="w-2 bg-blue-200 h-[60%] rounded-t-sm"></div>
+                    <div class="w-2 bg-blue-300 h-[50%] rounded-t-sm"></div>
+                    <div class="w-2 bg-blue-400 h-[45%] rounded-t-sm"></div>
+                    <div class="w-2 bg-blue-500 h-[35%] rounded-t-sm"></div>
+                    <div class="w-2 bg-blue-600 h-[30%] rounded-t-sm"></div>
+                    <!-- SVG Overlay for line -->
+                    <svg class="absolute inset-0 w-full h-full pointer-events-none" preserveaspectratio="none">
+                        <path d="M10 60 Q 80 80, 160 70 T 320 90" fill="none" stroke="#135bec" stroke-linecap="round"
+                            stroke-width="3"></path>
+                    </svg>
+                </div>
+                <div class="flex justify-between text-[10px] text-gray-400 mt-1 px-1">
+                    <span>Minggu 1</span>
+                    <span>Minggu 2</span>
+                    <span>Minggu 3</span>
+                    <span>Minggu 4</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Transaction Tables -->
+    <div class="flex flex-col gap-6 px-4">
+        <!-- Pemasukan Section -->
+        <div class="flex flex-col gap-3">
+            <div class="flex items-center justify-between">
+                <h3 class="text-lg font-bold text-[#111318] dark:text-white">Rincian Pemasukan</h3>
+                <span
+                    class="bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300 text-xs font-bold px-2 py-1 rounded">Income</span>
+            </div>
+            <div
+                class="bg-white dark:bg-[#1a202c] rounded-xl overflow-hidden shadow-sm border border-gray-100 dark:border-gray-800">
+                <table class="w-full text-left border-collapse">
+                    <thead class="bg-gray-50 dark:bg-gray-800/50">
+                        <tr>
+                            <th class="p-3 text-xs font-medium text-gray-500 uppercase tracking-wider w-1/4">Tanggal
+                            </th>
+                            <th class="p-3 text-xs font-medium text-gray-500 uppercase tracking-wider">Keterangan</th>
+                            <th class="p-3 text-xs font-medium text-gray-500 uppercase tracking-wider text-right">Jumlah
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-100 dark:divide-gray-800 text-sm">
+                        <tr>
+                            <td class="p-3 text-gray-600 dark:text-gray-300">19 Des</td>
+                            <td class="p-3 font-medium">Penjualan 8 Singkong</td>
+                            <td class="p-3 text-right font-bold text-green-600 dark:text-green-400">+Rp40.000</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3 text-gray-600 dark:text-gray-300">11 Des</td>
+                            <td class="p-3 font-medium">Penjualan 2 Singkong</td>
+                            <td class="p-3 text-right font-bold text-green-600 dark:text-green-400">+Rp10.000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- Pengeluaran Section -->
+        <div class="flex flex-col gap-3">
+            <div class="flex items-center justify-between">
+                <h3 class="text-lg font-bold text-[#111318] dark:text-white">Rincian Pengeluaran</h3>
+                <span
+                    class="bg-red-100 text-red-700 dark:bg-red-900 dark:text-red-300 text-xs font-bold px-2 py-1 rounded">Expense</span>
+            </div>
+            <div
+                class="bg-white dark:bg-[#1a202c] rounded-xl overflow-hidden shadow-sm border border-gray-100 dark:border-gray-800">
+                <table class="w-full text-left border-collapse">
+                    <thead class="bg-gray-50 dark:bg-gray-800/50">
+                        <tr>
+                            <th class="p-3 text-xs font-medium text-gray-500 uppercase tracking-wider w-1/4">Tanggal
+                            </th>
+                            <th class="p-3 text-xs font-medium text-gray-500 uppercase tracking-wider">Keterangan</th>
+                            <th class="p-3 text-xs font-medium text-gray-500 uppercase tracking-wider text-right">Jumlah
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-100 dark:divide-gray-800 text-sm">
+                        <tr>
+                            <td class="p-3 text-gray-600 dark:text-gray-300">28 Des</td>
+                            <td class="p-3 font-medium">Bumbu</td>
+                            <td class="p-3 text-right font-bold text-red-500 dark:text-red-400">-Rp29.000</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3 text-gray-600 dark:text-gray-300">28 Des</td>
+                            <td class="p-3 font-medium">Stiker</td>
+                            <td class="p-3 text-right font-bold text-red-500 dark:text-red-400">-Rp20.200</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3 text-gray-600 dark:text-gray-300">15 Des</td>
+                            <td class="p-3 font-medium">Bumbu</td>
+                            <td class="p-3 text-right font-bold text-red-500 dark:text-red-400">-Rp68.000</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3 text-gray-600 dark:text-gray-300">15 Des</td>
+                            <td class="p-3 font-medium">Singkong</td>
+                            <td class="p-3 text-right font-bold text-red-500 dark:text-red-400">-Rp30.000</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3 text-gray-600 dark:text-gray-300">11 Des</td>
+                            <td class="p-3 font-medium">Singkong</td>
+                            <td class="p-3 text-right font-bold text-red-500 dark:text-red-400">-Rp20.000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <div
+        class="mt-8 pt-8 pb-4 border-t border-gray-200 dark:border-gray-800 flex flex-col items-center justify-center gap-2">
+        <p class="text-sm font-semibold text-gray-500 dark:text-gray-400">Tugas KWU – Dagang Chiporia</p>
+        <p class="text-xs text-gray-400 dark:text-gray-600">© 2025 Financial Report Project</p>
+    </div>
+</body>
+
+</html>
